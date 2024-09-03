@@ -4,7 +4,7 @@ void main(){
     /* Create a Dart console program that will accept 2 double values 
     and display the sum, difference, product, and quotient 
     of the two numbers with 2 decimal numbers. */
-    /*
+    
     print("Problem no.1");
     print("Enter two doubles:");
     double input1 = double.parse(stdin.readLineSync()!);
@@ -14,7 +14,7 @@ void main(){
     print('Difference: ${(input1 - input2).toStringAsFixed(2)}');
     print('Product: ${(input1 * input2).toStringAsFixed(2)}');
     print('Quotient: ${(input1 / input2).toStringAsFixed(2)}');
-    */
+    
     /* Create a Dart console program that will accept the user's name and display the name 
     with stripped spaces, with the first and last letters in uppercase and letters 
     in between in lowercase. */
@@ -29,7 +29,7 @@ void main(){
     print('Name length: $namenum');
     
     /* Create a Dart console program that will accept 10 numbers and display the largest entered number*/
-    /*
+    
     int? max;
     print('Enter 10 numbers:');
     for(int i=0; i<11; i++){
@@ -40,5 +40,5 @@ void main(){
         }
     }
     print('Largest entered number is $max');
-    */
+
 }
