@@ -38,30 +38,36 @@
     echo '<br>Lowest grade:'.findLowestGrade(grades: $grades).'<br>';
     //Create a function to Categorize Grades
     function categorizeGrades(array $grades){
-        $categorized = [];
+        $categorized = ['Excellent'=>[],'Good'=>[],'Average'=>[],'Pass'=>[],'Fail'=>[]];
         foreach($grades as $grade){
             if ($grade >= 90 && $grade <= 100) {
-                $categorized['Excellent'] = $grade;  
+                $categorized['Excellent'][] = $grade;  
             } 
             elseif ($grade >= 80 && $grade < 90) {
-                $categorized['Good'] = $grade;      
+                $categorized['Good'][] = $grade;      
             } 
             elseif ($grade >= 70 && $grade < 80) {             //UMAY NA UMAY NA AKO SA ASSOCIATIVE ARRAYS
-                $categorized['Average']= $grade;    
+                $categorized['Average'][] = $grade;    
             } 
             elseif ($grade >= 60 && $grade < 70) {
-                $categorized['Poor'] = $grade;      
+                $categorized['Poor'][] = $grade;      
             } 
             elseif ($grade < 59) {
-                $categorized['Fail'] = $grade;
+                $categorized['Fail'][] = $grade;
             }
             //echo "<br>".$categorized;
         }
         return $categorized;
     }
     $results = categorizeGrades($grades);
-    foreach($results as $result=>$grade){ 
-        echo "$result = $grade <br>";
+    // foreach($grades as $grade){
+    //     echo $grade.'<br>';
+    // }
+    echo 'Categorized grades:<br>';
+    foreach($results as $result=>$gradeArray){ 
+        foreach($gradeArray as $grade){
+            echo "$result = $grade <br>";
+        }
     }
 
 ?>
